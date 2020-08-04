@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061009636525",
+    "firebase_url": "https://t-dalh.firebaseio.com",
+    "project_id": "t-dalh",
+    "storage_bucket": "t-dalh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061009636525:android:44b0629fbdee3dff289a24",
+        "android_client_info": {
+          "package_name": "com.example.t_dal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061009636525-hhtcfq7l3vp1kkpambp9lqho332kpbog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.t_dal",
+            "certificate_hash": "9ba78a45cfe93fd5a78e3c70c61502fc90861c1e"
+          }
+        },
+        {
+          "client_id": "1061009636525-brvfihm2p7266gds7sfn668b77usifpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLd_3xXRRr5WgA07OZ0NcLTzH9yWhal-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061009636525-brvfihm2p7266gds7sfn668b77usifpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
