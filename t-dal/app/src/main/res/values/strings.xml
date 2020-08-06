@@ -2,4 +2,15 @@
     <string name="app_name">t-dal</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
+    <!--    <String-array name="student_options">-->
+    <!--        <item>Available courses</item>-->
+    <!--        <item>Make appointment</item>-->
+    <!--        <item>Create TA profile</item>-->
+    <!--    </String-array>-->
+    <!--    <String-array name="instructor_options">-->
+    <!--    <item>All TAs</item>-->
+    <!--    <item>TAs applied for job</item>-->
+    <!--    <item></item>-->
+    <!--</String-array>-->
+
 </resources>

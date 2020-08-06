@@ -5,7 +5,8 @@
     android:id="@+id/drawable_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/myWhite">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,9 +30,11 @@
             android:layout_marginTop="58dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/all_users_post_list"
+                android:id="@+id/usersOptionsList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="519dp"
+                android:layout_marginTop="100dp"
+                android:background="@color/myWhite"/>
         </FrameLayout>
     </RelativeLayout>
 

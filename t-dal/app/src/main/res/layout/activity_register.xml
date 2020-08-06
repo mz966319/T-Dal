@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="139dp"
         android:layout_marginLeft="139dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="70dp"
         android:layout_centerInParent="true"
         app:srcCompat="@drawable/logo" />
 
@@ -75,4 +75,15 @@
         android:text="Create Account"
         android:textColor="#fbf7ea"
         android:textSize="20dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:shadowColor="#201E1E"
+        android:text="T-DAL"
+        android:textColor="#050505"
+        android:textSize="50dp" />
 </RelativeLayout>

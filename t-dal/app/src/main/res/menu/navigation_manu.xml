@@ -12,15 +12,6 @@
     android:id="@+id/nav_home"
     android:title="Home"
     android:icon="@drawable/home"/>
-
-    <item
-        android:id="@+id/nav_friends"
-        android:title="Friends"
-        android:icon="@drawable/friends"/>
-    <item
-        android:id="@+id/nav_find_friends"
-        android:title="Find_Friends"
-        android:icon="@drawable/find_people"/>
     <item
         android:id="@+id/nav_messages"
         android:title="Messages"
