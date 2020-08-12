@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
                     if(snapshot.hasChild("fullname") && snapshot.hasChild("usertype") && snapshot.hasChild("username")) {
                         currUserType = snapshot.child("usertype").getValue().toString();
                         list.add(currUserType);
-                        String fullname = snapshot.child("fullname").getValue().toString()+"\n"
-                                + snapshot.child("username").getValue().toString()+"\n"+currUserType;
+                        String fullname = snapshot.child("fullname").getValue().toString();//+"\n"
+//                                + snapshot.child("username").getValue().toString()+"\n"+currUserType;
 //                                +snapshot.child("usertype").getValue().toString();
                         NavProfileUserName.setText(fullname);
 
@@ -176,11 +176,15 @@ public class MainActivity extends AppCompatActivity {
     private void UserMenuSelector(MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_profile:
+                Intent loginIntent = new Intent(MainActivity.this,ProfileActivity.class);
+                loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(loginIntent);
+                finish();
                 Toast.makeText(this,"Profile",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nav_home:
-                Toast.makeText(this,"Home",Toast.LENGTH_SHORT).show();
-                break;
+//            case R.id.nav_home:
+//                Toast.makeText(this,"Home",Toast.LENGTH_SHORT).show();
+//                break;
             case R.id.nav_messages:
                 Toast.makeText(this,"Messages",Toast.LENGTH_SHORT).show();
                 break;

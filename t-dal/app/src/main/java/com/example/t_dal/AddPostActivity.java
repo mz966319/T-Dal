@@ -59,7 +59,6 @@ public class AddPostActivity extends AppCompatActivity {
         generalPostsRef = FirebaseDatabase.getInstance().getReference().child("General Posts");
         usersRef = FirebaseDatabase.getInstance().getReference().child("Users");
 
-
         mToolbar = (Toolbar) findViewById(R.id.add_post_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

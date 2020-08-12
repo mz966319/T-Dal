@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TAProfileActivity"
+    android:background="@color/myWhite">
+    <include
+        android:id="@+id/ta_profile_toolbar"
+        layout="@layout/app_bar_layout"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/full_name_ta_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:text="Full Name"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/username_ta_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/full_name_ta_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="username"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/email_ta_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_ta_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Email"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/upload_resume_ta_profile"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_ta_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="download Resume"
+        android:background="@drawable/button"
+        android:layout_width="220dp"
+
+        />
+
+    <Button
+        android:id="@+id/upload_record_ta_profile"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_resume_ta_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="download Academic Record"
+        android:background="@drawable/button"
+        android:layout_width="220dp"/>
+
+    <Button
+        android:id="@+id/create_button_ta_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_record_ta_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:text=""
+        android:background="@drawable/button" />
+<!--    <Button-->
+<!--        android:id="@+id/contact_button_ta_profile"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/create_button_ta_profile"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Contact"-->
+<!--        android:background="@drawable/button" />-->
+
+
+    <ImageButton
+        android:id="@+id/header_edit_ta_profile_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="13dp"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="centerCrop"
+        android:src="@drawable/edit_icon" />
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobPostPageActivity"
+    android:background="@color/myWhite">
+
+    <TextView
+        android:id="@+id/CourseName_postPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="course"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/JobTitle_postPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CourseName_postPage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="40dp"
+        android:text="title"
+        android:textColor="@android:color/black"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/ProfessorName_postPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/JobTitle_postPage"
+        android:layout_marginTop="40dp"
+        android:text="prof name"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ProfessorName_postPage"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Description: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Description_postPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView16"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Description"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Description_postPage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="104dp"
+        android:text="Date of posting: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/Date_postPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Description_postPage"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="105dp"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:text="date"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/apply_button_postPage"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Apply"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/Date_postPage"
+        android:background="@drawable/button"/>
+
+
+
+</RelativeLayout>

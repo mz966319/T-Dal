@@ -21,11 +21,11 @@ public class OptionsAdapter extends RecyclerView.Adapter<OptionsAdapter.MyViewHo
     public OptionsAdapter(Context context, String currUserType){
         this.context=context;
         if(currUserType.equals("Instructor"))
-            this.options = new String[]{"Add a job post","Show my job posts","All TAs","TAs applied for job"};
+            this.options = new String[]{"Add a job post","Show my job posts","Applications","List of TAs"};
         else if(currUserType.equals("Student"))
-            this.options = new String[]{"Available courses","Make appointment","Create TA profile","List of TAs"};
+            this.options = new String[]{"Make appointment","Create TA profile","List of TAs"};
         else
-            this.options = new String[]{"Available courses","Make appointment","Create TA profile","List of TAs","Edit TA profile","Show my TA profile","View job posts"};
+            this.options = new String[]{"Make appointment","List of TAs","Show my TA profile","View job posts","Applications"};
     }
 
     @NonNull
@@ -53,12 +53,63 @@ public class OptionsAdapter extends RecyclerView.Adapter<OptionsAdapter.MyViewHo
                     context.startActivity(intent);
                     //context.finish();
                 }
+                if(position==1 && options[position].equals("List of TAs")){
+                    intent = new Intent(context, TAProfileListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","TA" );
+
+                    context.startActivity(intent);
+                    //context.finish();
+                }
+
                 if(position==1 && options[1].equals("Show my job posts")){
                     intent = new Intent(context, JobPostsActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","Instructor" );
                     context.startActivity(intent);
 
                 }
+                if(position==1 && options[position].equals("Create TA profile")){
+                    intent = new Intent(context, CreateTAProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    intent.putExtra("userType","TA" );
+                    context.startActivity(intent);
+                }
+                if(position==2 && options[position].equals("Applications")){
+                    intent = new Intent(context, TAProfileListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","mInstructor" );
+                    context.startActivity(intent);
+                    //context.finish();
+                }
+
+                if(position==2 && options[position].equals("Show my TA profile")){
+                    intent = new Intent(context, TAProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","TA" );
+                    context.startActivity(intent);
+                }
+                if(position==3 && options[position].equals("View job posts")){
+                    intent = new Intent(context, JobPostsActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","TA" );
+                    context.startActivity(intent);
+                }
+                if(position==3 && options[position].equals("List of TAs")){
+                    intent = new Intent(context, TAProfileListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","Instructor" );
+                    context.startActivity(intent);
+                    //context.finish();
+                }
+                if(position==4 && options[position].equals("Applications")){
+                    intent = new Intent(context, JobPostsActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","mTA" );
+                    context.startActivity(intent);
+
+                }
+
 
             }
         });

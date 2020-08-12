@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTAProfileActivity"
+    android:background="@color/myWhite">
+    <include
+        android:id="@+id/edit_ta_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+
+
+    <Button
+        android:id="@+id/update_resume_ta_edit"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_ta_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:text="Update Resume"
+        android:background="@drawable/button"
+        android:layout_width="220dp"
+
+        />
+
+    <Button
+        android:id="@+id/update_record_ta_edit"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_resume_ta_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="Upload Academic Record"
+        android:background="@drawable/button"
+        android:layout_width="220dp"/>
+
+    <Button
+        android:id="@+id/update_button_ta_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_course_text_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/button"
+        android:text="Update" />
+    <Button
+        android:id="@+id/cancel_button_ta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_button_ta_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button"
+        android:text="Cancel" />
+
+    <EditText
+        android:id="@+id/add_course_text_edit"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/update_record_ta_edit"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/courses_spinner_edit"
+        android:layout_toRightOf="@+id/courses_spinner"
+        android:ems="10"
+        android:hint="Add Course Name"
+        android:inputType="textPersonName"
+        android:background="@drawable/inputs"/>
+
+    <Button
+        android:id="@+id/add_course_button_edit"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/update_record_ta_edit"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="41dp"
+        android:layout_toEndOf="@+id/add_course_text_edit"
+        android:layout_toRightOf="@+id/add_course_text"
+        android:background="@drawable/button"
+        android:text="ADD" />
+
+    <Spinner
+        android:id="@+id/courses_spinner_edit"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/update_record_ta_edit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/button" />
+
+</RelativeLayout>

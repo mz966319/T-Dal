@@ -122,64 +122,70 @@ public class SetupActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if(requestCode==Gallery_pic && resultCode == RESULT_OK && data!=null){
-//            Uri ImageUri = data.getData();
-//            CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
-//                    .setAspectRatio(1,1).start(this);
-//        }
-//        if(requestCode==CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
-//            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-//            if(resultCode == RESULT_OK){
-//                loadinBar.setTitle("Profile Image");
-//                loadinBar.setMessage("Please wait, profile image being updated...");
-//                loadinBar.show();
-//                loadinBar.setCanceledOnTouchOutside(true);
-//                Uri resultUri = result.getUri();
-//                StorageReference filePath = userProfileImageRef.child(currUserID + ".jpg");
-//
-//                filePath.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-//                        if(task.isSuccessful()){
-//                            Toast.makeText(SetupActivity.this,"Profile image stored successfully!",Toast.LENGTH_SHORT).show();
-//                            final String downloadUrl = task.getResult().getStorage().getDownloadUrl().toString();
-//                            usersRef.child("profileimage").setValue(downloadUrl)
-//                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                        @Override
-//                                        public void onComplete(@NonNull Task<Void> task) {
-//                                            if(task.isSuccessful()){
-//
-//                                                Intent selfIntent = new Intent(SetupActivity.this, SetupActivity.class);
-//                                                startActivity(selfIntent);
-//                                                Toast.makeText(SetupActivity.this,"Profile image stored to database successfully!",Toast.LENGTH_SHORT).show();
-//                                                loadinBar.dismiss();
-//                                            }
-//                                            else{
-//                                                String message = task.getException().getMessage();
-//                                                Toast.makeText(SetupActivity.this,"Error: "+message,Toast.LENGTH_SHORT).show();
-//                                                loadinBar.dismiss();
-//                                            }
-//                                        }
-//                                    });
-//                        }
-//                    }
-//                });
-//            }
-//            else {
-//                Toast.makeText(this,"Error: Image cant be cropped. Try Again! ",Toast.LENGTH_SHORT).show();
-//                loadinBar.dismiss();
-//            }
-//
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==Gallery_pic && resultCode == RESULT_OK && data!=null){
+            Uri ImageUri = data.getData();
+            CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
+                    .setAspectRatio(1,1).start(this);
+        }
+        if(requestCode==CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if(resultCode == RESULT_OK){
+                loadinBar.setTitle("Profile Image");
+                loadinBar.setMessage("Please wait, profile image being updated...");
+                loadinBar.show();
+                loadinBar.setCanceledOnTouchOutside(true);
+                Uri resultUri = result.getUri();
+                StorageReference filePath = userProfileImageRef.child(currUserID + ".jpg");
+
+                filePath.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(SetupActivity.this,"Profile image stored successfully!",Toast.LENGTH_SHORT).show();
+                            final String downloadUrl = task.getResult().getStorage().getDownloadUrl().toString();
+                            usersRef.child("profileimage").setValue(downloadUrl)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+
+                                                Intent selfIntent = new Intent(SetupActivity.this, SetupActivity.class);
+                                                startActivity(selfIntent);
+                                                Toast.makeText(SetupActivity.this,"Profile image stored to database successfully!",Toast.LENGTH_SHORT).show();
+                                                loadinBar.dismiss();
+                                            }
+                                            else{
+                                                String message = task.getException().getMessage();
+                                                Toast.makeText(SetupActivity.this,"Error: "+message,Toast.LENGTH_SHORT).show();
+                                                loadinBar.dismiss();
+                                            }
+                                        }
+                                    });
+                        }
+                    }
+                });
+            }
+            else {
+                Toast.makeText(this,"Error: Image cant be cropped. Try Again! ",Toast.LENGTH_SHORT).show();
+                loadinBar.dismiss();
+            }
+
+        }
+    }
 
     private void SaveAccountSetupInfo() {
         String username = UserName.getText().toString();
         String fullname = FullName.getText().toString();
         String userType = UserType.getSelectedItem().toString();
+
+        Intent intent = getIntent();
+        String email = intent.getExtras().getString("email");
+        System.out.println("************************"+email+"*****************************");
+
+        String course=intent.getExtras().getString("course");
 
         if(TextUtils.isEmpty(username)){
             Toast.makeText(this,"Username field is empty!",Toast.LENGTH_SHORT).show();
@@ -199,6 +205,7 @@ public class SetupActivity extends AppCompatActivity {
             userMap.put("username",username);
             userMap.put("fullname",fullname);
             userMap.put("usertype",userType);
+            userMap.put("email",email);
             usersRef.updateChildren(userMap).addOnCompleteListener(new OnCompleteListener() {
                 @Override
                 public void onComplete(@NonNull Task task) {

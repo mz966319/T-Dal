@@ -107,8 +107,10 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void SendUserToSetupActivity() {
+        String email = UserEmail.getText().toString();
         Intent setupIntent = new Intent(RegisterActivity.this, SetupActivity.class);
         setupIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        setupIntent.putExtra("email",email);
         startActivity(setupIntent);
         finish();
     }
