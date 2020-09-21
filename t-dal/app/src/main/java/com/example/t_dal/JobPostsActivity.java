@@ -129,7 +129,7 @@ public class JobPostsActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Job Posts");
+        getSupportActionBar().setTitle("");
 
         postList = findViewById(R.id.jobPostsrecyclerview);
         Intent intent = getIntent();

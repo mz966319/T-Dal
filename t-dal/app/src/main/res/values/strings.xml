@@ -2,6 +2,7 @@
     <string name="app_name">t-dal</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
+    <string name="about_us_txt">T -dal is an app created to enable all students to easily apply for TA job post or/and book appointment with their choice of TA, and instructors to hire ideal students for a job in the course they will be offering in a particular semester at Dalhousie University.</string>
     <!--    <String-array name="student_options">-->
     <!--        <item>Available courses</item>-->
     <!--        <item>Make appointment</item>-->

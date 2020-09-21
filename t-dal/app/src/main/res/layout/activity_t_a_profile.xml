@@ -11,6 +11,36 @@
         layout="@layout/app_bar_layout"
         >
     </include>
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="arial"
+            android:text="TA Profile"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/full_name_ta_profile"
@@ -20,7 +50,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="130dp"
         android:text="Full Name"
-        android:textSize="16dp" />
+        android:textSize="19dp"
+        android:fontFamily="arial"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/username_ta_profile"
@@ -30,7 +62,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="username"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:fontFamily="arial"
+        />
 
     <TextView
         android:id="@+id/email_ta_profile"
@@ -40,7 +74,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Email"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:fontFamily="arial" />
 
     <Button
         android:id="@+id/upload_resume_ta_profile"
@@ -51,6 +86,8 @@
         android:text="download Resume"
         android:background="@drawable/button"
         android:layout_width="220dp"
+        android:fontFamily="arial"
+        android:textStyle="bold"
 
         />
 
@@ -62,7 +99,9 @@
         android:layout_marginTop="25dp"
         android:text="download Academic Record"
         android:background="@drawable/button"
-        android:layout_width="220dp"/>
+        android:layout_width="220dp"
+        android:fontFamily="arial"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/create_button_ta_profile"
@@ -72,7 +111,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="81dp"
         android:text=""
-        android:background="@drawable/button" />
+        android:background="@drawable/button"
+        android:fontFamily="arial"
+        android:textStyle="bold"/>
 <!--    <Button-->
 <!--        android:id="@+id/contact_button_ta_profile"-->
 <!--        android:layout_width="wrap_content"-->

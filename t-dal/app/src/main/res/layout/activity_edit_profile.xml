@@ -5,45 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity">
-
+    <include
+        android:id="@+id/create_ta_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
 
     <LinearLayout
         android:id="@+id/tdalname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark">
-
+        android:layout_height="60dp"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="arial"
             android:text="Edit Profile"
             android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:id="@+id/logopic"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp">
-
-            <ImageView
-                android:layout_width="29dp"
-                android:layout_height="51dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="4dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/logo" />
-        </RelativeLayout>
-
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo" />
     </LinearLayout>
 
     <RelativeLayout
@@ -78,7 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgUser"
             android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="arial"
+            android:textStyle="bold"
             android:hint="new name"
             android:layout_marginTop="10dp"
             android:textSize="30dp"
@@ -136,6 +137,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Username"
+                    android:fontFamily="arial"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 
@@ -143,7 +146,7 @@
                     android:id="@+id/username_edit_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="arial"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:hint="new username"/>
@@ -227,6 +230,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="apply changes"
+        android:fontFamily="arial"
         android:textStyle="bold"
         android:layout_below="@id/info1"
         android:layout_marginTop="40dp"
@@ -236,8 +240,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Cancel"
-    android:textStyle="bold"
-    android:layout_below="@id/change_button_edit_profile"
+        android:fontFamily="arial"
+        android:textStyle="bold"
+        android:layout_below="@id/change_button_edit_profile"
     android:layout_marginTop="30dp"
     android:background="@drawable/button"/>
 

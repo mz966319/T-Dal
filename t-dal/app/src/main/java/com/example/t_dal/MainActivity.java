@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Home");
+        getSupportActionBar().setTitle("");
 
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawable_layout);
@@ -87,9 +87,10 @@ public class MainActivity extends AppCompatActivity {
                     if(snapshot.hasChild("fullname") && snapshot.hasChild("usertype") && snapshot.hasChild("username")) {
                         currUserType = snapshot.child("usertype").getValue().toString();
                         list.add(currUserType);
-                        String fullname = snapshot.child("fullname").getValue().toString();//+"\n"
+                        String fullname = snapshot.child("fullname").getValue().toString()+"\n"
+                        +snapshot.child("usertype").getValue().toString();
 //                                + snapshot.child("username").getValue().toString()+"\n"+currUserType;
-//                                +snapshot.child("usertype").getValue().toString();
+//
                         NavProfileUserName.setText(fullname);
 
 
@@ -189,6 +190,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Messages",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_settings:
+                Intent settingIntent = new Intent(MainActivity.this,SettingsActivity.class);
+                settingIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(settingIntent);
+                finish();
                 Toast.makeText(this,"Settings",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout:

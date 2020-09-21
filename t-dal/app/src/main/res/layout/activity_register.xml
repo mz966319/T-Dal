@@ -73,17 +73,20 @@
         android:background="@drawable/button"
         android:padding="15dp"
         android:text="Create Account"
-        android:textColor="#fbf7ea"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:fontFamily="arial"
+        android:textStyle="bold"        />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="30dp"
         android:shadowColor="#201E1E"
         android:text="T-DAL"
-        android:textColor="#050505"
-        android:textSize="50dp" />
+        android:fontFamily="arial"
+        android:textStyle="bold"
+        android:textColor="#231F20"
+        android:textSize="40dp" />
 </RelativeLayout>

@@ -57,6 +57,7 @@ public class EditTAProfileActivity extends AppCompatActivity {
         updateRecordButton = (Button) findViewById(R.id.update_resume_ta_edit);
         updateResumeButton = (Button) findViewById(R.id.update_record_ta_edit);
         updateButton = (Button) findViewById(R.id.update_button_ta_edit);
+        cancelButton = (Button) findViewById(R.id.cancel_button_ta);
         addCourse = (Button) findViewById(R.id.add_course_button_edit);
         CourseName = (EditText) findViewById(R.id.add_course_text_edit);
         courseSpinner = (Spinner) findViewById(R.id.courses_spinner_edit);
@@ -100,15 +101,15 @@ public class EditTAProfileActivity extends AppCompatActivity {
             }
         });
 
-//        cancelButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent mainIntent = new Intent(EditTAProfileActivity.this, MainActivity.class);
-//                mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                startActivity(mainIntent);
-//                finish();
-//            }
-//        });
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(EditTAProfileActivity.this, MainActivity.class);
+                mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(mainIntent);
+                finish();
+            }
+        });
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -6,17 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".JobPostPageActivity"
     android:background="@color/myWhite">
+    <include
+        android:id="@+id/job_post_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="arial"
+            android:text="Job Post"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/CourseName_postPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:text="course"
         android:textColor="@android:color/black"
         android:textSize="40dp"
+        android:fontFamily="arial"
         android:textStyle="bold" />
 
 
@@ -31,7 +72,9 @@
         android:layout_marginTop="40dp"
         android:text="title"
         android:textColor="@android:color/black"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:fontFamily="arial"
+        />
 
 
     <TextView
@@ -43,6 +86,7 @@
         android:text="prof name"
         android:textColor="@android:color/black"
         android:layout_centerHorizontal="true"
+        android:fontFamily="arial"
 
         android:textSize="20dp" />
 
@@ -57,6 +101,7 @@
         android:text="Description: "
         android:textColor="@android:color/darker_gray"
         android:textSize="20dp"
+        android:fontFamily="arial"
         android:textStyle="bold"/>
 
     <TextView
@@ -68,7 +113,9 @@
         android:layout_marginTop="10dp"
         android:text="Description"
         android:textColor="@android:color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:fontFamily="arial"
+        />
 
 
     <TextView
@@ -80,7 +127,9 @@
         android:layout_marginTop="104dp"
         android:text="Date of posting: "
         android:textColor="@android:color/darker_gray"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:fontFamily="arial"
+        />
 
     <TextView
         android:id="@+id/Date_postPage"
@@ -93,7 +142,9 @@
         android:layout_toRightOf="@+id/textView9"
         android:text="date"
         android:textColor="@android:color/black"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:fontFamily="arial"
+        android:textStyle="italic"/>
 
     <Button
         android:id="@+id/apply_button_postPage"
@@ -103,7 +154,9 @@
         android:text="Apply"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/Date_postPage"
-        android:background="@drawable/button"/>
+        android:background="@drawable/button"
+        android:fontFamily="arial"
+        android:textStyle="bold"/>
 
 
 

@@ -39,6 +39,8 @@
                 android:text="TextView"
                 android:textColor="@color/myWhite"
                 android:textSize="20dp"
+                android:fontFamily="arial"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

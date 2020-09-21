@@ -91,6 +91,16 @@ public class TAProfileActivity extends AppCompatActivity {
         else{
             createButton.setText("Contact");
             editButton.setVisibility(View.GONE);
+            createButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(TAProfileActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    intent.putExtra("userType","TA" );
+                    startActivity(intent);
+                    finish();
+                }
+            });
         }
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override

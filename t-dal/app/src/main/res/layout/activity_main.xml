@@ -17,6 +17,42 @@
             layout="@layout/app_bar_layout"
                 >
         </include>
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:layout_marginTop="7dp"
+                android:fontFamily="arial"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="70dp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
 
         <FrameLayout
             android:id="@+id/main_container"
@@ -32,8 +68,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/usersOptionsList"
                 android:layout_width="match_parent"
-                android:layout_height="519dp"
-                android:layout_marginTop="100dp"
+                android:layout_height="529dp"
+                android:layout_marginTop="110dp"
                 android:background="@color/myWhite"/>
         </FrameLayout>
     </RelativeLayout>

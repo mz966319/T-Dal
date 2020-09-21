@@ -69,7 +69,7 @@ public class TAProfileListActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("TAs List");
+        getSupportActionBar().setTitle("");
 
 
         recyclerView = (RecyclerView) findViewById(R.id.profile_list_rec);

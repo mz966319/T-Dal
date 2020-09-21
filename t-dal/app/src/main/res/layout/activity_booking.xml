@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingActivity"
+    android:background="@color/myWhite">
+    <include
+        android:id="@+id/edit_ta_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="arial"
+            android:text="Booking"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextBooking3"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="e.g. 10am"
+        android:background="@drawable/inputs"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewBooking3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewBooking3" />
+
+    <EditText
+        android:id="@+id/editTextBooking2"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="e.g. Monday"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewBooking3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBooking3" />
+
+    <EditText
+        android:id="@+id/editTextBooking4"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="e.g. Jane"
+        android:background="@drawable/inputs"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TextViewBooking4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewBooking4" />
+
+    <TextView
+        android:id="@+id/textViewBooking2"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:ems="10"
+        android:fontFamily="arial"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:text="Course Number"
+
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/editTextBooking1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewBooking4"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="TA Name"
+        android:fontFamily="arial"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/editTextBooking4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBooking1" />
+
+    <Button
+        android:id="@+id/bookingSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:text="submit"
+        android:background="@drawable/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBooking5" />
+
+    <TextView
+        android:id="@+id/textViewBooking3"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="76dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Time"
+        android:fontFamily="arial"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/TextViewBooking4"
+        app:layout_constraintEnd_toStartOf="@+id/editTextBooking2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextBooking1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextBooking1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:background="@drawable/inputs"
+        android:hint="e.g. CSCI2134"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewBooking2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBooking2" />
+
+    <EditText
+        android:id="@+id/editTextBooking5"
+        android:layout_width="256dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputs"
+        android:hint="Note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBooking4" />
+
+    <TextView
+        android:id="@+id/textViewBooking1"
+        android:layout_width="96dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBooking1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBooking5"
+        android:layout_width="116dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="184dp"
+        android:text="Send A Message"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBooking6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBooking6"
+        android:layout_width="237dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="128dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonScheduleBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="100dp"
+        android:text="schedule"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

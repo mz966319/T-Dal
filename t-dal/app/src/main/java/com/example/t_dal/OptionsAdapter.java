@@ -53,6 +53,18 @@ public class OptionsAdapter extends RecyclerView.Adapter<OptionsAdapter.MyViewHo
                     context.startActivity(intent);
                     //context.finish();
                 }
+//                if(position==0 && options[0].equals("Make appointment")){
+//                    intent = new Intent(context, TimeTableActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    context.startActivity(intent);
+//                    //context.finish();
+//                }
+                if(position==0 && options[0].equals("Make appointment")){
+                    intent = new Intent(context, TimeTableActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    context.startActivity(intent);
+                    //context.finish();
+                }
                 if(position==1 && options[position].equals("List of TAs")){
                     intent = new Intent(context, TAProfileListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -85,6 +97,12 @@ public class OptionsAdapter extends RecyclerView.Adapter<OptionsAdapter.MyViewHo
 
                 if(position==2 && options[position].equals("Show my TA profile")){
                     intent = new Intent(context, TAProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("userType","TA" );
+                    context.startActivity(intent);
+                }
+                if(position==2 && options[position].equals("List of TAs")){
+                    intent = new Intent(context, TAProfileListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("userType","TA" );
                     context.startActivity(intent);
